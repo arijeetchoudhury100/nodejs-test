@@ -19,6 +19,9 @@ app.use((req,res,next)=>{
 	fs.appendFileSync('server.log',log+'\n');
 	next();
 })
+app.get('/projects',(req,res)=>{
+	res.send("this is coming soon");
+});
 app.get('/',(req,res) => {
 	res.render('home.hbs',{
 		pageTitle : 'Home Page',
